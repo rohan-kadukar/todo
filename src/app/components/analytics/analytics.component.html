@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Task Completion Rate</h5>
+          <div class="progress mb-2">
+            <div 
+              class="progress-bar" 
+              role="progressbar" 
+              [style.width.%]="completionRate"
+              [attr.aria-valuenow]="completionRate" 
+              aria-valuemin="0" 
+              aria-valuemax="100">
+              {{completionRate.toFixed(1)}}%
+            </div>
+          </div>
+          <p class="text-muted">Average completion time: {{averageCompletionTime.toFixed(1)}} days</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Distribution by Category</h5>
+          <ul class="list-group">
+            <li *ngFor="let category of objectKeys(categoryDistribution)" 
+                class="list-group-item d-flex justify-content-between align-items-center">
+              {{category}}
+              <span class="badge bg-primary rounded-pill">
+                {{categoryDistribution[category]}}
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Distribution by Priority</h5>
+          <ul class="list-group">
+            <li *ngFor="let priority of objectKeys(priorityDistribution)"
+                class="list-group-item d-flex justify-content-between align-items-center">
+              {{priority}}
+              <span class="badge bg-secondary rounded-pill">
+                {{priorityDistribution[priority]}}
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  

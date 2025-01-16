@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Task Overview</h5>
+          <p>Total Tasks: {{totalTasks}}</p>
+          <p>Completed: {{completedTasks}}</p>
+          <p>Completion Rate: {{totalTasks ? (completedTasks/totalTasks*100).toFixed(1) : 0}}%</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Urgent Tasks</h5>
+          <div class="list-group">
+            <div *ngFor="let task of urgentTasks" class="list-group-item">
+              <h6 class="mb-1">{{task.title}}</h6>
+              <p class="mb-1 text-muted">{{task.description}}</p>
+              <small>Due: {{task.dueDate | date}}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
