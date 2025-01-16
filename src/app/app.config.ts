@@ -9,13 +9,13 @@ import { RouterModule } from '@angular/router';  // Import RouterModule
 import { routes } from './app.routes';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCPb-jHCkalnrupO5Epj15k3HodQTM0Ytw",
-  authDomain: "todo-app-e8626.firebaseapp.com",
-  projectId: "todo-app-e8626",
-  storageBucket: "todo-app-e8626.firebasestorage.app",
-  messagingSenderId: "519544795117",
-  appId: "1:519544795117:web:cbb3b05f6e8ef04776c1e4",
-  measurementId: "G-TV63J0EQT4"
+  apiKey: "",
+  authDomain: "",
+  projectId: "6",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 export const appConfig: ApplicationConfig = {
